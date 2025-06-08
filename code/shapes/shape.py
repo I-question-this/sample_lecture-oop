@@ -4,15 +4,15 @@ class Shape(ABC):
     @abstractmethod
     def area(self):
         pass
-
-    def __eq__(self, other) -> bool:
-        if isinstance(other, Shape):
-            return self.area() == other.area()
-        else:
-            return self.area() == other
  
     def __gt__(self, other) -> bool:
         if isinstance(other, Shape):
             return self.area() > other.area()
         else:
-            return self.area() > other
+            raise ValueError("Can only compare with shapes")
+
+    def __eq__(self, other) -> bool:
+        if isinstance(other, Shape):
+            return self.area() == other.area()
+        else:
+            raise ValueError("Can only compare with shapes")
