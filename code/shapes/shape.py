@@ -10,9 +10,3 @@ class Shape(ABC):
             return self.area() > other.area()
         else:
             raise ValueError("Can only compare with shapes")
-
-    def __eq__(self, other) -> bool:
-        if isinstance(other, Shape):
-            return self.area() == other.area()
-        else:
-            raise ValueError("Can only compare with shapes")
