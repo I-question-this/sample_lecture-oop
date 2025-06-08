@@ -44,6 +44,12 @@
 \item
 }
 
+%% Fix for Appendix translate error in beamer style
+\renewcommand\appendixname{Appendix}
+%%% Source
+% https://tex.stackexchange.com/questions/192686/hyperref-warning-caused-by-beamer-appendix
+%%% Summary
+% The problem is the definition of \appendix in beamerbasesection.sty which uses \part{\appendixname} and \appendixname is defined in beamerbasemisc.sty as \translate{Appendix}
 
 
 %% Document
