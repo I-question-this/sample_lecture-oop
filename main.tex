@@ -28,13 +28,25 @@
   showtabs=false,
   tabsize=2
 }
+\lstset{style=mystyle}
 
 %% Directory trees
 \usepackage{dirtree}
 
-\lstset{style=mystyle}
+%% Spacing Commands
+\newcommand{\closenewline}{%
+  \par\nopagebreak
+  \vspace{-\itemsep}
+  \vspace{-\parsep}
+}
+\newcommand{\closeitem}{%
+  \closenewline
+\item
+}
 
 
+
+%% Document
 \title[Intro to Inheritance \& OOP]{Introduction to Inheritance and Object Oriented Programming}
 \subtitle{Example Instruction Demo}
 \author{Tyler Westland}
@@ -79,88 +91,103 @@
 
 \section{Examples}
 \subsection{The Circle}
+  \begin{frame}
+  \frametitle{The Circle Class}
+  code/shapes/circle.py
+  \lstinputlisting[language=Python]{code/shapes/circle.py}
+  \end{frame}
 
-\begin{frame}
-\frametitle{The Circle Class}
-code/shapes/circle.py
-\lstinputlisting[language=Python]{code/shapes/circle.py}
-\end{frame}
+  \begin{frame}
+  \frametitle{Our First Circle}
 
-\begin{frame}
-\frametitle{Our First Circle}
+  code/main.py
+  \lstinputlisting[language=Python, firstline=6, lastline=7]{code/main.py}
 
-code/main.py
-\lstinputlisting[language=Python, firstline=6, lastline=7]{code/main.py}
+  output
+  \lstinputlisting[lastline=2]{code/output.txt}
 
-output
-\lstinputlisting[lastline=2]{code/output.txt}
+  \begin{block}{Code Snippets}
+  main.py and the output will be shown in snippets.
+  The full text is in the appendix.
+  \end{block}
+  \end{frame}
 
-\begin{block}{Code Snippets}
-main.py and the output will be shown in snippets.
-The full text is in the appendix.
-\end{block}
-\end{frame}
+  \begin{frame}
+  \frametitle{Two Circles}
 
-\begin{frame}
-\frametitle{Two Circles}
+  code/main.py
+  \lstinputlisting[language=Python, firstline=6, lastline=12]{code/main.py}
 
-code/main.py
-\lstinputlisting[language=Python, firstline=6, lastline=12]{code/main.py}
+  output
+  \lstinputlisting[lastline=4]{code/output.txt}
+  \end{frame}
 
-output
-\lstinputlisting[lastline=4]{code/output.txt}
-\end{frame}
 
-\section{Section 2}
-\begin{frame}
-\frametitle{Section 2}
-Stuff
-\end{frame}
+\subsection{The Rectangle}
+  \begin{frame}
+  \frametitle{The Rectangle Class}
+  code/shapes/rectangle.py
+  \lstinputlisting[language=Python]{code/shapes/rectangle.py}
+  \end{frame}
+
+  \begin{frame}
+  \frametitle{Comparing Our Shapes}
+
+  code/main.py
+  \lstinputlisting[language=Python, firstline=6, lastline=7,numbers=none]{code/main.py}
+  \closenewline
+  \lstinputlisting[language=Python, firstline=14, lastline=19,numbers=none]{code/main.py}
+
+  output
+  \lstinputlisting[lastline=1,numbers=none]{code/output.txt}
+  \closenewline
+  \lstinputlisting[firstline=4,lastline=5,numbers=none]{code/output.txt}
+  \end{frame}
 
 \appendix
 \section{Full Code}
-\begin{frame}
-\frametitle{Folder Structure}
-\dirtree{%
- .1 code/.
- .2 main.py.
- .2 shapes/.
- .3 shape.py.
- .3 circle.py.
- .3 rectangle.py.
-}
-\end{frame}
+  \begin{frame}
+  \frametitle{Folder Structure}
+  \dirtree{%
+   .1 code/.
+   .2 main.py.
+   .2 shapes/.
+   .3 shape.py.
+   .3 circle.py.
+   .3 rectangle.py.
+  }
+  \end{frame}
 
-\begin{frame}
-\frametitle{main.py}
-\lstinputlisting[language=Python, lastline=17]{code/main.py}
-\end{frame}
+  \begin{frame}
+  \frametitle{main.py}
+  \lstinputlisting[language=Python, lastline=17]{code/main.py}
+  \end{frame}
 
-\begin{frame}
-\frametitle{main.py -- cont}
-\lstinputlisting[language=Python, firstline=18]{code/main.py}
-\end{frame}
+  \begin{frame}
+  \frametitle{main.py -- cont}
+  \lstinputlisting[language=Python, firstline=18]{code/main.py}
+  \end{frame}
 
-\begin{frame}
-\frametitle{shapes/shape.py}
-\lstinputlisting[language=Python]{code/shapes/shape.py}
-\end{frame}
+  \begin{frame}
+  \frametitle{shapes/shape.py}
+  \lstinputlisting[language=Python]{code/shapes/shape.py}
+  \end{frame}
 
-\begin{frame}
-\frametitle{shapes/circle.py}
-\lstinputlisting[language=Python]{code/shapes/circle.py}
-\end{frame}
+  \begin{frame}
+  \frametitle{shapes/circle.py}
+  \lstinputlisting[language=Python]{code/shapes/circle.py}
+  \end{frame}
 
-\begin{frame}
-\frametitle{shapes/rectangle.py}
-\lstinputlisting[language=Python]{code/shapes/rectangle.py}
-\end{frame}
+  \begin{frame}
+  \frametitle{shapes/rectangle.py}
+  \lstinputlisting[language=Python]{code/shapes/rectangle.py}
+  \end{frame}
 
 \subsection{Output}
-\begin{frame}
-\frametitle{output}
-\lstinputlisting[]{code/output.txt}
-\end{frame}
+  \begin{frame}
+  \frametitle{output}
+  \lstinputlisting[]{code/output.txt}
+  \end{frame}
 
 \end{document}
 
