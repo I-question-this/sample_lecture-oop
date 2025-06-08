@@ -1,0 +1,7 @@
+circ area: 28.27
+circ2 area: 78.54
+circ.area() > circ2.area(): False
+rect area: 20
+circ.area() > rect.area(): True
+circ > circ2: False
+circ > rect: True

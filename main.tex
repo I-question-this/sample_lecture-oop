@@ -1,0 +1,139 @@
+\documentclass{beamer}
+\usetheme{Boadilla}
+
+%% Code Listings
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+
+%% Directory trees
+\usepackage{dirtree}
+
+\lstset{style=mystyle}
+
+
+\title{Introduction to Inheritance and Object Oriented Programming}
+\subtitle{Example Instruction Demo}
+\author{Tyler Westland}
+\date{}
+\begin{document}
+ 
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+
+% Outline
+%
+%%%%%%%
+% Thesis: object oriented programming is a design pattern that links data and functions
+%  Understatement: it's the one of the most prolific design pattern, being the basis many programming languages such as Java, Python, and C++
+% Circle -- all code
+% output of area
+% show two circles
+% comparison of two circles
+% Rectangle -- all code
+% show comparison of rectangle and circle
+% Shape -- all code
+% show shortened comparison
+% appendix: folder structure
+% appendix: full code of all code
+
+\section{Section 1}
+\subsection{sub a}
+
+
+\begin{frame}
+\frametitle{Section 1 - sub a}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{frame}
+
+\subsection{sub b}
+
+\begin{frame}
+\frametitle{Section 1 - sub b}
+Blah blah blah blah blah
+\end{frame}
+
+\section{Section 2}
+\begin{frame}
+\frametitle{Section 2}
+Stuff
+\end{frame}
+
+\appendix
+\section{Full Code}
+\begin{frame}
+\frametitle{Folder Structure}
+%\begin{verbatim}
+%├─ main.py
+%├─ shapes/
+%│  ├─ circle.py
+%│  ├─ shape.py
+%│  ├─ square.py
+%\end{verbatim}
+\dirtree{%
+ .1 code/.
+ .2 main.py.
+ .2 shapes/.
+ .3 shape.py.
+ .3 circle.py.
+ .3 rectangle.py.
+}
+\end{frame}
+
+\begin{frame}
+\frametitle{main.py}
+\lstinputlisting[language=Python, lastline=17]{code/main.py}
+\end{frame}
+
+\begin{frame}
+\frametitle{main.py -- cont}
+\lstinputlisting[language=Python, firstline=18]{code/main.py}
+\end{frame}
+
+\begin{frame}
+\frametitle{shapes/shape.py}
+\lstinputlisting[language=Python]{code/shapes/shape.py}
+\end{frame}
+
+\begin{frame}
+\frametitle{shapes/circle.py}
+\lstinputlisting[language=Python]{code/shapes/circle.py}
+\end{frame}
+
+\begin{frame}
+\frametitle{shapes/rectangle.py}
+\lstinputlisting[language=Python]{code/shapes/rectangle.py}
+\end{frame}
+
+\end{document}
+
