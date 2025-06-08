@@ -35,7 +35,7 @@
 \lstset{style=mystyle}
 
 
-\title{Introduction to Inheritance and Object Oriented Programming}
+\title[Intro to Inheritance \& OOP]{Introduction to Inheritance and Object Oriented Programming}
 \subtitle{Example Instruction Demo}
 \author{Tyler Westland}
 \date{}
@@ -67,20 +67,48 @@
 % appendix: folder structure
 % appendix: full code of all code
 
-\section{Section 1}
-\subsection{sub a}
-
+\section{High Level}
 
 \begin{frame}
-\frametitle{Section 1 - sub a}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\frametitle{What Problems Do Objects Solve}
 \end{frame}
 
-\subsection{sub b}
+\begin{frame}
+\frametitle{What Problems Does Inheritance Solve}
+\end{frame}
+
+\section{Examples}
+\subsection{The Circle}
 
 \begin{frame}
-\frametitle{Section 1 - sub b}
-Blah blah blah blah blah
+\frametitle{The Circle Class}
+code/shapes/circle.py
+\lstinputlisting[language=Python]{code/shapes/circle.py}
+\end{frame}
+
+\begin{frame}
+\frametitle{Our First Circle}
+
+code/main.py
+\lstinputlisting[language=Python, firstline=6, lastline=7]{code/main.py}
+
+output
+\lstinputlisting[lastline=2]{code/output.txt}
+
+\begin{block}{Code Snippets}
+main.py and the output will be shown in snippets.
+The full text is in the appendix.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Two Circles}
+
+code/main.py
+\lstinputlisting[language=Python, firstline=6, lastline=12]{code/main.py}
+
+output
+\lstinputlisting[lastline=4]{code/output.txt}
 \end{frame}
 
 \section{Section 2}
@@ -126,6 +154,12 @@ Stuff
 \begin{frame}
 \frametitle{shapes/rectangle.py}
 \lstinputlisting[language=Python]{code/shapes/rectangle.py}
+\end{frame}
+
+\subsection{Output}
+\begin{frame}
+\frametitle{output}
+\lstinputlisting[]{code/output.txt}
 \end{frame}
 
 \end{document}
