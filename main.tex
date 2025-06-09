@@ -45,6 +45,26 @@
   \closenewline
 \item
 }
+%% Source
+% https://tex.stackexchange.com/questions/51113/horizontal-equivalent-to-raisebox
+% Example:
+% \begin{document}
+% Here is some text. \par
+% Here is \shifttext{20pt}{some} text. \par
+% Here is \shifttext{-20pt}{some} text. \par
+% \end{document}
+\newcommand*{\shifttext}[2]{%
+  \settowidth{\@tempdima}{#2}%
+  \makebox[\@tempdima]{\hspace*{#1}#2}%
+}
+
+%%% Other Spacing examples
+% some text
+% \quad some text
+% \qquad some text
+% \hspace{0.2\textwidth} some more text
+% \hspace{0.333\textwidth} still more text
+% \hspace{0.5\textwidth} still more text
 
 %% Fix for Appendix translate error in beamer style
 \renewcommand\appendixname{Appendix}
@@ -111,6 +131,25 @@
 
   \begin{frame}
     \frametitle{What Problems Does Inheritance Solve}
+    \begin{itemize}
+      \item<1->Allows for reuse of data structures and functions
+        \begin{itemize}
+          \item Reused portions can be modified
+        \end{itemize}
+      \item<2->Describes what to expect from every type of an object
+        \begin{itemize}
+          \item Every number should allow math operations
+          \item Every "Vehicle" in a video game should allow "driving"
+        \end{itemize}
+    \end{itemize}
+    \pause
+    Example of a Vehicle being the parent to various drivable objects
+    \dirtree{%
+     .1 Vehicle/.
+     .2 Boat.
+     .2 Car.
+     .2 Plane.
+    }
   \end{frame}
 
 \section{Examples}
