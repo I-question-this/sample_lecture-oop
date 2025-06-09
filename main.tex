@@ -90,23 +90,6 @@
 \tableofcontents
 \end{frame}
 
-
-% Outline
-%
-%%%%%%%
-% Thesis: object oriented programming is a design pattern that links data and functions
-%  Understatement: it's the one of the most prolific design pattern, being the basis many programming languages such as Java, Python, and C++
-% Circle -- all code
-% output of area
-% show two circles
-% comparison of two circles
-% Rectangle -- all code
-% show comparison of rectangle and circle
-% Shape -- all code
-% show shortened comparison
-% appendix: folder structure
-% appendix: full code of all code
-
 \section{High Level}
   \begin{frame}
     \frametitle{What Problems Do Objects Solve}
@@ -117,8 +100,7 @@
           \item Complex: measurements associated with timestamps
         \end{itemize}
       \item<2-> and functions
-        \begin{itemize}
-          \item Simple: addition and concatenation
+        \begin{itemize} \item Simple: addition and concatenation
           \item Complex: sampling measurements to have timestamps in 30 minute intervals
         \end{itemize}
       \item<3-> Objects combine functions with data
@@ -166,15 +148,16 @@
       This is distinct from being an instance of an object
     \end{block}
   \end{frame}
-\subsection{The Circle}
+
+\subsection{The Rectangle}
   \begin{frame}
-    \frametitle{The Circle Class}
-    code/shapes/circle.py
-    \lstinputlisting[language=Python]{code/shapes/circle.py}
+    \frametitle{The Rectangle Class}
+    code/shapes/rectangle.py
+    \lstinputlisting[language=Python]{code/shapes/rectangle.py}
   \end{frame}
 
   \begin{frame}
-    \frametitle{Our First Circle}
+    \frametitle{Our First Rectangle}
 
     code/main.py
     \lstinputlisting[language=Python, firstline=6, lastline=7]{code/main.py}
@@ -192,7 +175,7 @@
   \end{frame}
 
   \begin{frame}
-    \frametitle{Two Circles}
+    \frametitle{Two Rectangles}
 
     code/main.py
     \lstinputlisting[language=Python, firstline=6, lastline=12]{code/main.py}
@@ -202,11 +185,11 @@
   \end{frame}
 
 
-\subsection{The Rectangle}
+\subsection{The Circle}
   \begin{frame}
-    \frametitle{The Rectangle Class}
-    code/shapes/rectangle.py
-    \lstinputlisting[language=Python]{code/shapes/rectangle.py}
+    \frametitle{The Circle Class}
+    code/shapes/circle.py
+    \lstinputlisting[language=Python]{code/shapes/circle.py}
   \end{frame}
 
   \begin{frame}
@@ -259,8 +242,8 @@
      .2 main.py.
      .2 shapes/.
      .3 shape.py.
-     .3 circle.py.
      .3 rectangle.py.
+     .3 circle.py.
     }
   \end{frame}
 
@@ -280,13 +263,13 @@
   \end{frame}
 
   \begin{frame}
-    \frametitle{shapes/circle.py}
-    \lstinputlisting[language=Python]{code/shapes/circle.py}
+    \frametitle{shapes/rectangle.py}
+    \lstinputlisting[language=Python]{code/shapes/rectangle.py}
   \end{frame}
 
   \begin{frame}
-    \frametitle{shapes/rectangle.py}
-    \lstinputlisting[language=Python]{code/shapes/rectangle.py}
+    \frametitle{shapes/circle.py}
+    \lstinputlisting[language=Python]{code/shapes/circle.py}
   \end{frame}
 
 \subsection{Output}
