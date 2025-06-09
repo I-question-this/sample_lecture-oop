@@ -111,7 +111,7 @@
   \begin{frame}
     \frametitle{What Problems Do Objects Solve}
     \begin{itemize}
-      \item<1-> Programs consistent of numbers\ldots
+      \item<1-> Programs consistent of data\ldots
         \begin{itemize}
           \item Simple: numbers and letters
           \item Complex: measurements associated with timestamps
@@ -119,9 +119,9 @@
       \item<2-> and functions
         \begin{itemize}
           \item Simple: addition and concatenation
-          \item Complex: sampling measurements to have timestamps in 5 second intervals
+          \item Complex: sampling measurements to have timestamps in 30 minute intervals
         \end{itemize}
-      \item<3-> Objects combine data with functions useful for that data
+      \item<3-> Objects combine functions with data
         \begin{itemize}
           \item Simple:\lstinputlisting[language=Python,firstline=1,lastline=2]{examples.py}
           \item Complex: \lstinputlisting[language=Python,firstline=3,lastline=7]{examples.py}
@@ -131,6 +131,9 @@
 
   \begin{frame}
     \frametitle{What Problems Does Inheritance Solve}
+    \begin{block}{Inheritance}
+      The process of creating classes of objects from existing classes
+    \end{block}
     \begin{itemize}
       \item<1->Allows for reuse of data structures and functions
         \begin{itemize}
@@ -145,7 +148,7 @@
     \pause
     Example of a Vehicle being the parent to various drivable objects
     \dirtree{%
-     .1 Vehicle/.
+     .1 Vehicle.
      .2 Boat.
      .2 Car.
      .2 Plane.
@@ -153,6 +156,16 @@
   \end{frame}
 
 \section{Examples}
+\subsection{The Generic Shape}
+  \begin{frame}
+    \frametitle{The Shape Class}
+    code/shapes/shape.py
+    \lstinputlisting[language=Python, lastline=6]{code/shapes/shape.py}
+    \begin{block}{Classes Vs Objects}
+      This is a class, it defines what an object is.
+      This is distinct from being an instance of an object
+    \end{block}
+  \end{frame}
 \subsection{The Circle}
   \begin{frame}
     \frametitle{The Circle Class}
@@ -167,7 +180,10 @@
     \lstinputlisting[language=Python, firstline=6, lastline=7]{code/main.py}
 
     output
-    \lstinputlisting[lastline=2]{code/output.txt}
+    \lstinputlisting[lastline=1]{code/output.txt}
+    \begin{block}{Instances of Objects}
+      circ is an object as it is an instance of Circle
+    \end{block}
 
     \begin{block}{Code Snippets}
       main.py and the output will be shown in snippets.
@@ -182,7 +198,7 @@
     \lstinputlisting[language=Python, firstline=6, lastline=12]{code/main.py}
 
     output
-    \lstinputlisting[lastline=4]{code/output.txt}
+    \lstinputlisting[lastline=3]{code/output.txt}
   \end{frame}
 
 
@@ -207,9 +223,9 @@
     \lstinputlisting[firstline=4,lastline=5,numbers=none]{code/output.txt}
   \end{frame}
 
-\subsection{The Generic Shape}
+\subsection{The Generic Shape: Extended}
   \begin{frame}
-    \frametitle{The Shape Class}
+    \frametitle{The Extended Shape Class}
     code/shapes/shape.py
     \lstinputlisting[language=Python]{code/shapes/shape.py}
   \end{frame}

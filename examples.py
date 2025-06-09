@@ -1,7 +1,7 @@
 >>> "cat" + "dog"
 'catdog'
->>> measurements.resample("5s").bfill()
-0    1.0
-5    4.0
-10   2.0
+>>> measurements.resample("30min").bfill()
+0   73.0
+30  75.0
+60  74.0
 dtype: float64
