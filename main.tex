@@ -1,4 +1,6 @@
 \documentclass{beamer}
+%%% Disable pauses
+%\documentclass[handout]{beamer}
 \usetheme{Darmstadt}
 
 %% Code Listings
@@ -89,17 +91,17 @@
   \begin{frame}
     \frametitle{What Problems Do Objects Solve}
     \begin{itemize}
-      \item Programs consistent of numbers\ldots
+      \item<1-> Programs consistent of numbers\ldots
         \begin{itemize}
           \item Simple: numbers and letters
           \item Complex: measurements associated with timestamps
         \end{itemize}
-      \item and functions
+      \item<2-> and functions
         \begin{itemize}
           \item Simple: addition and concatenation
           \item Complex: sampling measurements to have timestamps in 5 second intervals
         \end{itemize}
-      \item Objects combine data with functions useful for that data
+      \item<3-> Objects combine data with functions useful for that data
         \begin{itemize}
           \item Simple:\lstinputlisting[language=Python,firstline=1,lastline=2]{examples.py}
           \item Complex: \lstinputlisting[language=Python,firstline=3,lastline=7]{examples.py}
