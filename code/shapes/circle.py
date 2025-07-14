@@ -5,5 +5,5 @@ class Circle(Shape):
     def __init__(self, radius: float):
         self.radius = radius
 
-    def area(self):
+    def area(self) -> float:
         return math.pi * math.pow(self.radius, 2)

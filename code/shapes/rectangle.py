@@ -5,5 +5,5 @@ class Rectangle(Shape):
         self.length = length
         self.width = width
 
-    def area(self):
+    def area(self) -> float:
         return self.length * self.width
